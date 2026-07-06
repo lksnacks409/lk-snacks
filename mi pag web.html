@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LK Snacks</title>
+
+<style>
+
+/* ===== GENERAL ===== */
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff3e0; /* crema/naranja claro */
+}
+
+/* ===== ENCABEZADO ===== */
+header{
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #e65100, #bf360c);
+    color: white;
+}
+
+.logo{
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+/* ===== MENÚ ===== */
+nav ul{
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #e65100; /* naranja fuerte */
+}
+
+nav ul li{
+    margin: 0 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: #ffccbc; /* naranja claro */
+}
+
+/* ===== TÍTULOS ===== */
+h1, h2{
+    text-align: center;
+    color: #bf360c; /* rojo oscuro */
+}
+
+/* ===== CARRUSEL ===== */
+.carrusel{
+    width: 60%;
+    max-width: 500px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.25);
+    border: 3px solid #e65100;
+}
+
+.imagenes{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.imagenes img{
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* ===== INDICADORES ===== */
+.indicadores{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.indicador{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #ffccbc;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.indicador.activo{
+    background-color: #bf360c;
+}
+
+/* ===== LÍNEA ===== */
+.linea{
+    border: none;
+    height: 3px;
+    background-color: #e65100;
+    margin: 40px 0;
+}
+
+/* ===== SECCIONES ===== */
+section{
+    padding: 20px;
+}
+
+.quienes,
+.mision,
+.vision{
+    max-width: 700px;
+    margin: auto;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background-color: #bf360c;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    color: white;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== LOGO Y TÍTULO ===== -->
+<header>
+    <img src="imagen0.jpeg" alt="Logo LK Snacks" class="logo">
+    <h1>LK Snacks</h1>
+</header>
+
+<!-- ===== MENÚ ===== -->
+<nav>
+    <ul>
+        <li><a href="file:///C:/nision/quienes.html">¿Quiénes Somos?</a></li>
+        <li><a href="file:///C:/nision/mision.html">Misión</a></li>
+        <li><a href="file:///C:/nision/vision.html">Visión</a></li>
+    </ul>
+</nav>
+
+<!-- ===== PRODUCTOS ===== -->
+<h1>Nuestros Productos</h1>
+
+<div class="carrusel">
+    <div class="imagenes">
+        <img src="imagen1.jpeg" alt="Snack 1">
+        <img src="imagen2.jpeg" alt="Snack 2">
+        <img src="imagen3.jpeg" alt="Snack 3">
+    </div>
+</div>
+
+<div class="indicadores"></div>
+
+<hr class="linea">
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <p>© 2026 LK Snacks - Todos los derechos reservados</p>
+</footer>
+
+<!-- ===== SCRIPT CARRUSEL ===== -->
+<script>
+
+let indice = 0;
+const imagenes = document.querySelector('.imagenes');
+const totalImagenes = document.querySelectorAll('.imagenes img').length;
+const contenedorIndicadores = document.querySelector('.indicadores');
+
+// crear puntos
+for(let i = 0; i < totalImagenes; i++){
+    const punto = document.createElement('span');
+    punto.classList.add('indicador');
+
+    punto.addEventListener('click', () => {
+        mostrarImagen(i);
+    });
+
+    contenedorIndicadores.appendChild(punto);
+}
+
+function actualizarIndicadores(){
+    document.querySelectorAll('.indicador').forEach((punto, i) => {
+        punto.classList.toggle('activo', i === indice);
+    });
+}
+
+function mostrarImagen(i){
+    indice = i;
+    imagenes.style.transform = `translateX(-${indice * 100}%)`;
+    actualizarIndicadores();
+}
+
+function cambiarImagen(){
+    indice = (indice + 1) % totalImagenes;
+    mostrarImagen(indice);
+}
+
+// auto carrusel
+setInterval(cambiarImagen, 3000);
+
+mostrarImagen(0);
+
+</script>
+
+</body>
+</html>

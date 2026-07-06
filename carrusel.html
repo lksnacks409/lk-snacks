@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LK Snacks</title>
+
+<style>
+
+/* ===== GENERAL ===== */
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff3e0;
+}
+
+/* ===== ENCABEZADO ===== */
+header{
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #e65100, #bf360c);
+    color: white;
+}
+
+.logo{
+    width: 170px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+/* ===== MENÚ ===== */
+nav ul{
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #e65100;
+}
+
+nav ul li{
+    margin: 0 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: #ffccbc;
+}
+
+/* ===== TITULOS ===== */
+h1{
+    text-align: center;
+    color: #bf360c;
+}
+
+/* ===== CONTENEDOR ===== */
+.contenedor-principal{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+/* ===== CARRUSEL ===== */
+.carrusel{
+    width: 500px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.25);
+    border: 3px solid #e65100;
+    background: white;
+}
+
+.imagenes{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.imagenes img{
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* ===== INDICADORES ===== */
+.indicadores{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.indicador{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #ffccbc;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.indicador.activo{
+    background-color: #bf360c;
+}
+
+/* ===== PANEL LATERAL ===== */
+.info-lateral{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ===== TARJETAS ===== */
+.tarjeta{
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    border-left: 8px solid #e65100;
+    transition: all 0.3s ease;
+}
+
+.tarjeta:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 18px rgba(0,0,0,0.25);
+}
+
+.tarjeta h2{
+    margin-top: 0;
+    color: #bf360c;
+    text-align: center;
+}
+
+.tarjeta p{
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* ===== LINEA ===== */
+.linea{
+    border: none;
+    height: 3px;
+    background-color: #e65100;
+    margin: 40px 0;
+}
+
+/* ===== FOOTER ===== */
+.footer-redes{
+    background-color: #bf360c;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.footer-redes img{
+    width: 45px;
+    height: 45px;
+    margin: 0 15px;
+    transition: transform 0.3s;
+}
+
+.footer-redes img:hover{
+    transform: scale(1.2);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+
+    .contenedor-principal{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-lateral{
+        width: 90%;
+    }
+
+    .carrusel{
+        width: 90%;
+    }
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+<!-- ===== LOGO Y TITULO ===== -->
+
+<header>
+    <img src="imagen0.jpeg" alt="Logo LK Snacks" class="logo">
+    <h1>LK Snacks</h1>
+</header>
+
+
+
+
+<!-- ===== MENU ===== -->
+
+
+<nav>
+    <ul>
+        <li><a href="file:///C:/nision/tabla/tabla.html">MENU</a></li>
+    </ul>
+</nav>
+
+
+
+
+<!-- ===== PRODUCTOS ===== -->
+
+<h1>Nuestros Productos</h1>
+
+<div class="contenedor-principal">
+
+
+
+<!-- Carrusel -->
+<div>
+    <div class="carrusel">
+        <div class="imagenes">
+            <img src="imagen1.jpeg" alt="Snack 1">
+            <img src="imagen2.jpeg" alt="Snack 2">
+            <img src="imagen3.jpeg" alt="Snack 3">
+        </div>
+    </div>
+
+    <div class="indicadores"></div>
+</div>
+
+
+
+<!-- Información -->
+<div class="info-lateral">
+
+    <div class="tarjeta">
+        <h2>¿Quiénes Somos?</h2>
+        <p>
+            LK Snacks es una empresa dedicada a la elaboración y distribución
+            de snacks de alta calidad. Nuestro compromiso es ofrecer productos
+            deliciosos, innovadores y elaborados con ingredientes seleccionados.
+        </p>
+    </div>
+
+
+
+    <div class="tarjeta">
+        <h2>Misión</h2>
+        <p>
+            Brindar snacks de excelente sabor y calidad, satisfaciendo las
+            necesidades de nuestros clientes mediante la innovación,
+            responsabilidad y mejora continua.
+        </p>
+    </div>
+
+
+
+    <div class="tarjeta">
+        <h2>Visión</h2>
+        <p>
+            Ser una empresa líder en el mercado de snacks, reconocida por
+            la calidad de sus productos, el servicio al cliente y la
+            innovación constante.
+        </p>
+    </div>
+
+</div>
+
+
+
+</div>
+
+
+
+<hr class="linea">
+
+
+
+<!-- ===== FOOTER ===== -->
+
+<footer class="footer-redes">
+    
+    <a href="https://instagram.com/TU_USUARIO" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+
+    <a href="https://facebook.com/TU_PAGINA" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+    </a>
+
+    <a href="https://wa.me/5215512345678" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+
+    <a href="tel:+525512345678">
+        <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Teléfono">
+    </a>
+
+</footer>
+
+
+
+<section id="ubicacion">
+    <h2>Ubicacion</h2>
+    <p>Las Huertas LK Snacks.</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.8473294149967!2d-99.56942869999999!3d19.972921799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d249004ecc863b%3A0x6ed7d2af0e1b6138!2sLK%20SNACKS!5e0!3m2!1ses-419!2smx!4v1781308260231!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+
+
+<!-- ===== SCRIPT CARRUSEL ===== -->
+
+<script>
+
+let indice = 0;
+const imagenes = document.querySelector('.imagenes');
+const totalImagenes = document.querySelectorAll('.imagenes img').length;
+const contenedorIndicadores = document.querySelector('.indicadores');
+
+// Crear indicadores
+for(let i = 0; i < totalImagenes; i++){
+
+    const punto = document.createElement('span');
+    punto.classList.add('indicador');
+
+    punto.addEventListener('click', () => {
+        mostrarImagen(i);
+    });
+
+    contenedorIndicadores.appendChild(punto);
+}
+
+function actualizarIndicadores(){
+
+    document.querySelectorAll('.indicador').forEach((punto, i) => {
+
+        punto.classList.toggle('activo', i === indice);
+
+    });
+}
+
+function mostrarImagen(i){
+
+    indice = i;
+    imagenes.style.transform = `translateX(-${indice * 100}%)`;
+
+    actualizarIndicadores();
+}
+
+function cambiarImagen(){
+
+    indice = (indice + 1) % totalImagenes;
+    mostrarImagen(indice);
+}
+
+setInterval(cambiarImagen, 3000);
+
+mostrarImagen(0);
+
+</script>
+
+</body>
+</html>
