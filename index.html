@@ -85,7 +85,7 @@ h1{
 
 .imagenes{
     display:flex;
-    transition:transform .5s ease-in-out;
+    transition:transform .6s ease-in-out;
 }
 
 .imagenes img{
@@ -203,6 +203,182 @@ h1{
 
 }
 
+.tabla{
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    text-align: center;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.tabla th{
+    background: #e65100;
+    color: white;
+    padding: 15px;
+    font-size: 26px;
+}
+
+.tabla td{
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.imagenes img{
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #e65100;
+    transition: transform 0.3s ease;
+}
+
+.imagenes img:hover{
+    transform: scale(1.2);
+}
+
+
+/* ===== MENÚ ===== */
+nav ul{
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #e65100;
+}
+
+nav ul li{
+    margin: 0 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: #ffccbc;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* espacio entre botones */
+    padding: 0;
+    margin: 0;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+    background: #e65100;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.menu li a:hover{
+    background: #bf360c;
+}
+
+
+.tabla{
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    text-align: center;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.tabla th{
+    background: #e65100;
+    color: white;
+    padding: 15px;
+    font-size: 26px;
+}
+
+.tabla td{
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.imagenes img{
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #e65100;
+    transition: transform 0.3s ease;
+}
+
+.imagenes img:hover{
+    transform: scale(1.2);
+}
+
+/* ===== ENCABEZADO ===== */
+header{
+    text-align: center;
+    padding: 100px;
+    background: linear-gradient(90deg, #e65100, #ce3e1a);
+    color: white;
+}
+
+.logo{
+    width: 170px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+/* ===== MENÚ ===== */
+nav ul{
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #e65100;
+}
+
+nav ul li{
+    margin: 0 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: #ffccbc;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* espacio entre botones */
+    padding: 0;
+    margin: 0;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+    background: #e65100;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.menu li a:hover{
+    background: #bf360c;
+}
+
+
 </style>
 
 </head>
@@ -214,13 +390,6 @@ h1{
     <h1>LK Snacks</h1>
 </header>
 
-<nav>
-    <ul>
-        <li><a href="tabla.html">MENÚ</a></li>
-        <li><a href="bebidas.html">BEBIDAS</a></li>
-        <li><a href="pedidos.html">PEDIDOS</a></li>
-    </ul>
-</nav>
 
 <h1>Nuestros Productos</h1>
 
@@ -242,7 +411,7 @@ h1{
 
     </div>
 
-    <div class="info-lateral">
+ <div class="info-lateral">
 
         <div class="tarjeta">
             <h2>¿Quiénes Somos?</h2>
@@ -274,6 +443,124 @@ h1{
     </div>
 
 </div>
+
+
+    <!-- ===== MENU ===== -->
+
+
+
+<table class="tabla">
+
+    <tr>
+        <th colspan="3">
+             Snacks
+        </th>
+    </tr>
+
+    <tr>
+        <td>Papas a la frnacesa:</td>
+        <td>$40.00 pesos</td>
+        <td><div class="imagenes">
+            <img src="c:\tabla\papas.jpg">
+        </div></td>
+    </tr>
+
+    <tr>
+        <td>Hamburguesas:</td>
+        <td>$100.00 pesos</td>
+        <td><div class="imagenes">
+            <img src="c:\Users\JIMENA 409\Desktop\practica2.8\imagen2.jpeg">
+        </div></td> 
+    </tr>
+
+    <tr>
+        <td>Hot Dogs:</td>
+        <td>$60.00 pesos</td>
+        <td><div class="imagenes">
+            <img src="c:\tabla\hotdog.jpg">
+        </div></td> 
+    </tr>
+
+        <tr>
+        <td>Dedos de Queso:</td>
+        <td>$50.00 pesos</td>
+        <td><div class="imagenes">
+            <img src="c:\tabla\dedosd e queso.jpeg">
+        </div></td> 
+    </tr>
+
+</table>
+
+
+<table class="tabla">
+
+    <tr>
+        <th colspan="3">
+             Bebidas
+        </th>
+    </tr>
+
+    <tr>
+        <td>Coca cola de 600ml:</td>
+        <td>$25.00 pesos</td>
+        <td><div class="imagenes">
+            <img src="c:\bebidas\coca.webp">
+        </div></td>
+    </tr>
+
+    <tr>
+        <td>Cafe cappuccino Chocolate:</td>
+        <td>$25.00 pesos</td>
+        <td><div class="imagenes">
+            <img src="c:\bebidas\cafe.jpg">
+        </div></td> 
+    </tr>
+
+
+    <tr>
+        <td>Cafe cappuccino Vainilla:</td>
+        <td>$25.00 pesos</td>
+        <td><div class="imagenes">
+            <img src="c:\bebidas\vainilla.webp">
+        </div></td> 
+    </tr>
+
+   <td>Boing de Mango:</td>
+        <td>$20.00 pesos</td>
+        <td><div class="imagenes">
+            <img src="c:\bebidas\mango.webp">
+        </div></td> 
+    <tr>
+       
+    </tr>
+
+    <tr>
+        <td>Boing de Fresa:</td>
+        <td>$20.00 pesos</td>
+        <td><div class="imagenes">
+            <img src="c:\bebidas\fresa.webp">
+        </div></td> 
+    </tr>
+
+    
+    <tr>
+        <td>Boing de Manzana:</td>
+        <td>$20.00 pesos</td>
+        <td><div class="imagenes">
+            <img src="c:\bebidas\manzana.jpg">
+        </div></td> 
+    </tr>
+
+<tr>
+    <td>Boing de Guayaba:</td>
+    <td>$20.00 pesos</td>
+    <td><div class="imagenes">
+   <img src="c:\bebidas\guayaba.webp">
+</div></td> 
+    </tr>
+
+</table>
+
 
 <hr class="linea">
 
