@@ -297,7 +297,6 @@ nav ul li a:hover{
     background: #bf360c;
 }
 
-
 </style>
 
 </head>
@@ -479,6 +478,7 @@ nav ul li a:hover{
 
 </table>
 
+
 <hr class="linea">
 
 <footer class="footer-redes">
@@ -503,6 +503,41 @@ style="border:0;"
 allowfullscreen=""
 loading="lazy">
 </iframe>
+
+<form
+name="Contacto"
+method="POST"
+data-netlify="true">
+
+<input type="hidden"
+name="form-name"
+value="Contacto">
+
+<label>Nombre:</label>
+<input
+type="text"
+name="nombre"
+required>
+
+<br><br>
+
+<label>Correo:</label>
+<input
+type="email"
+name="correo"
+required>
+
+<br><br>
+
+<label>Mensaje:</label>
+<textarea
+name="mensaje"
+required></textarea>
+
+<button type="submit">
+    Enviar
+</button>
+</form>
 
 </section>
 
